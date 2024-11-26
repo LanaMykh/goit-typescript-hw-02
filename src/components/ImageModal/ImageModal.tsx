@@ -27,15 +27,15 @@ type ImageModalProps = {
 };
 
 const ImageModal = ({ modalIsOpen, closeModal, dataModal }:ImageModalProps) => {
-  function afterOpenModal() {
+  function afterOpenModal(): void {
     document.body.style.overflow = 'hidden';
   }
 
-  function afterCloseModal() {
+  function afterCloseModal(): void {
     document.body.style.overflow = 'auto';
   }
 
-  function closeCard() {
+  function closeCard(): void {
     closeModal();
   }
 

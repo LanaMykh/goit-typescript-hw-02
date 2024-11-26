@@ -20,7 +20,6 @@ export const fetchImage = async (searchValue:string, currentPage:number): Promis
     }
   };
     const response = await axios.get<fetchImageResponse>('/search/photos', axiosOptions);
-    // console.log(response.data);
     
   return response.data;
 };

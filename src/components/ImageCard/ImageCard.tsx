@@ -7,7 +7,7 @@ type ImageCardProps = {
 };
 
 const ImageCard = ({ card, openModal }: ImageCardProps) => {
-  const onClickCard = () => {
+  const onClickCard = (): void => {
     openModal(card);
   };
 

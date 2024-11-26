@@ -7,7 +7,7 @@ type LoadMoreBtnProps = {
 };
 
 const LoadMoreBtn = ({ onClick, page, searchValue }:LoadMoreBtnProps) => {
-  const handleLoadMore = () => {
+  const handleLoadMore = (): void => {
     onClick(searchValue, page);
   };
 

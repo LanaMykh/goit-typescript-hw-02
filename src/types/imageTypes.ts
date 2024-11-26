@@ -9,6 +9,5 @@ export type ImageCard = {
    };
   user: {
     name: string;
-    // username: string;
   };
 };

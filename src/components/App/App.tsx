@@ -19,7 +19,7 @@ const App = () => {
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
   const [dataModal, setDataModal] = useState<Partial<ImageCard>>({});
 
-  const handleSearch = async (searchValue: string, page = 1) => {
+  const handleSearch = async (searchValue: string, page = 1): Promise<void> => {
     try {
       setError(false);
       setLoading(true);
@@ -50,12 +50,12 @@ const App = () => {
     }
   };
 
-  const openModal = (imageData: ImageCard) => {
+  const openModal = (imageData: ImageCard): void => {
     setModalIsOpen(true);
     setDataModal(imageData);
   };
 
-  const closeModal = () => {
+  const closeModal = (): void => {
     setModalIsOpen(false);
   };
 
@@ -65,11 +65,11 @@ const App = () => {
 
       {error && <ErrorMessage />}
 
-      {gallery !== null && (
+      {gallery.length > 0 && (
         <ImageGallery cards={gallery} openModal={openModal} />
       )}
 
-      {gallery !== null && !loading && currentPage < totalPages && (
+      {gallery.length > 0 && !loading && currentPage < totalPages && (
         <LoadMoreBtn
           onClick={handleSearch}
           page={currentPage}
