@@ -1,0 +1,30 @@
+.header {
+    /* background-color: rgb(174, 211, 144); */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+.input {
+    width: 300px;
+    border: 2px solid rgb(174, 211, 144);
+    border-radius: 2px;
+    padding: 0 4px;
+}
+
+.btn {
+    background-color: white;
+    border: 2px solid rgb(174, 211, 144);
+    border-radius: 2px;
+    color: rgb(46, 80, 19);
+    transition: backround-color 250ms linear;
+}
+
+.btn:hover {
+    background-color: rgb(82, 167, 138);
+}

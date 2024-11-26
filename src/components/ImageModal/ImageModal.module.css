@@ -1,0 +1,11 @@
+  .photoInfo {
+      text-align: center;
+  }
+
+  .listInfo {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      margin-bottom: 20px;
+      justify-content: center;
+  }
